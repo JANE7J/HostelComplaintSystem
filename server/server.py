@@ -3,7 +3,7 @@
 # Socket Programming - DS Lab
 # ==============================
 
-print("SERVER FILE STARTED")   # <-- MUST PRINT
+print("SERVER FILE STARTED")
 
 import socket
 import threading
@@ -61,5 +61,5 @@ def start_server():
         print(f"[ACTIVE CLIENTS] {threading.active_count() - 1}")
 
 
-# ENTRY POINT (DO NOT REMOVE)
+# ENTRY POINT (ONLY ONCE)
 start_server()
