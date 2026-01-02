@@ -3,7 +3,7 @@
 
 ---
 
-## 📌 Problem Description
+##  Problem Description
 
 In hostel environments, students often face issues such as water supply problems, electricity failures, cleanliness concerns, or general maintenance issues. Traditionally, these complaints are handled manually, which can be inefficient, slow, and difficult to track.
 
@@ -13,7 +13,7 @@ This project focuses on **functional correctness and distributed communication**
 
 ---
 
-## 🧱 System Architecture Overview
+##  System Architecture Overview
 
 The system follows a **three-layer distributed architecture**:
 
@@ -25,9 +25,9 @@ Each layer runs independently and communicates using well-defined protocols.
 
 ---
 
-## 🔁 Communication Model Used
+##  Communication Model Used
 
-### 1️⃣ Client → Middleware  
+### 1️. Client → Middleware  
 - **Protocol:** HTTP  
 - **Method:** POST  
 - **Data Format:** JSON  
@@ -38,7 +38,7 @@ JavaScript sends the complaint data as a JSON payload to the HTTP bridge server.
 
 ---
 
-### 2️⃣ Middleware → Backend  
+### 2️. Middleware → Backend  
 - **Protocol:** TCP Socket  
 - **Technology:** Python Socket Programming  
 
@@ -46,7 +46,7 @@ The HTTP Bridge Server translates the HTTP request into a TCP socket message and
 
 ---
 
-### 3️⃣ Backend → Middleware → Client  
+### 3️. Backend → Middleware → Client  
 
 The backend server processes the request and stores the complaint in memory.  
 An acknowledgment is sent back through the same path.  
@@ -54,7 +54,7 @@ The client receives a success response and is redirected to a confirmation page.
 
 ---
 
-## 🧠 In-Memory Storage Design
+## In-Memory Storage Design
 
 Complaints are stored in a **Python list (array)** inside the socket-based backend server.
 
@@ -81,7 +81,7 @@ This approach keeps the system lightweight and aligns with the lab focus on **di
 
 ---
 
-## 🖥️ Technologies Used
+##  Technologies Used
 
 ### Frontend (Client)
 - HTML  
@@ -101,9 +101,9 @@ This approach keeps the system lightweight and aligns with the lab focus on **di
 
 ---
 
-## ⚙️ Steps to Run the Application
+##  Steps to Run the Application
 
-### 1️⃣ Clone the Repository
+### 1️.  Clone the Repository
 ```bash
 git clone https://github.com/JANE7J/HostelComplaintSystem.git
 cd HostelComplaintSystem
